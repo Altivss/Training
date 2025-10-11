@@ -246,6 +246,16 @@ li.animate {
         padding: 8px;
         font-size: 0.9em;
     }
+    li img {
+        width: 1.5em;
+        height: 1.5em;
+        float: none;
+        display: block;
+        margin: 0 auto 10px;
+        border: 1px solid #ccc;
+        padding: 2px;
+        background-color: white;
+    }
     .progress-bar {
         height: 15px;
     }
