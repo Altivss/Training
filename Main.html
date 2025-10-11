@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayson C. Altivo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="scroll-progress"></div>
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    <div class="container">
+        <div id="home">
+            <img id="profile-img" src="altivo.jpg" alt="">
+            <h1>Jayson C. Altivo</h1>
+            <p id="intro">I am BS Information Technology with the experience on Web development like React js, html, CSS, and on the
+                backend is MongoDB, Express and SQL. I am also having an experience in Java, python and C#. Also, have some
+                knowledge in networking. I am strong in teamwork, critical thinking. Adaptable and eager to contribute to
+                the team.</p>
+        </div>
+        <p>📞 09086981332</p>
+        <p>📧 jaysonaltivo06@gmail.com</p>
+        <p>🌐 www.linkedin.com/in/jayson-altivo-9b234830a</p>
+        <p>🏠 0138 Purok 1, Brgy.Makiling, Calamba City, Laguna</p>
+
+        <h2 id="education">Education</h2>
+        <ul>
+            <li>BS Information Technology, STI College Calamba, 2021-2025 <img src="STI.jpg" alt="STI Certificate" style="width: 2.4em; height: 2.4em; object-fit: contain; float: right; margin: -10px -10px -10px 0; border: 1px solid #ccc; padding: 2px; background-color: white;"></li>
+            <li>Senior High School, Makiling Integrated School, 2018-2020 <img src="Makiling.png" alt="Makiling Certificate" style="width: 2.4em; height: 2.4em; object-fit: contain; float: right; margin: -10px -10px -10px 0; border: 1px solid #ccc; padding: 2px; background-color: white;"></li>
+        </ul>
+
+        <h2 id="skills">Skills</h2>
+        <div class="skills">
+            <div class="skill">
+                <span>Web Development</span>
+                <div class="progress-bar">
+                    <div class="progress" data-width="85%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Backend Development</span>
+                <div class="progress-bar">
+                    <div class="progress" data-width="80%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Programming Languages</span>
+                <div class="progress-bar">
+                    <div class="progress" data-width="75%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Networking Basics</span>
+                <div class="progress-bar">
+                    <div class="progress" data-width="70%"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Soft Skills</span>
+                <div class="progress-bar">
+                    <div class="progress" data-width="90%"></div>
+                </div>
+            </div>
+        </div>
+        <h2 id="projects">Projects</h2>
+        <ul>
+            <li>Capstone Project<br>
+                <br>Resident Record Management System, Certificate Issuance System for Barangay Mayapa, Calamba City,
+                Laguna<br>
+                <br>• Resident record
+                <br>• Issuance of Certificates
+                <br>• Storage of the new and old files
+                <br>• Can track the previous Blotter and store the new blotter for future purposes.
+            </li> <br>
+
+            <li>Company Website <br>
+                <br>ICS Enterprise Corporation <br>
+                <br>• Showcase the product of the company
+                <br>• Can request a quotation for bulk orders
+                <br>• The user can apply through website and it direct on email
+            </li>
+
+        </ul>
+        <h2 id="experience">Work Experience</h2>
+        <ul>
+            <li>Internship<br>
+                <br>ICS Enterprise Corporation<br>
+                <br>Barangay Halang , Calamba City, Laguna<br>
+                <br>• Web Development & Odoo<br>
+                • Handled the company website and update the products<br>
+                • Managed the Odoo system for inventory and sales tracking<br>
+                • Assisted in troubleshooting technical issues<br>
+            </li><br>
+
+            <li>Immersion<br>
+                <br>Panasonic Manufacturing Philippines Corporation<br>
+                <br>Barangay Milagrosa, Calamba City, Laguna<br>
+                <br>• Observed the daily operations of the manufacturing process<br>
+                • Learned about quality control and assurance practices<br>
+            </li> 
+        </ul>
+        <h2 id="certifications">Certifications</h2>
+        <ul id="certifications">
+          <li data-image="System Admin.png">System Administration (via Linux Professional Institute)</li>
+           <li data-image="Java.png">Java Foundations (via Oracle Academy)</li>
+           <li data-image="SAP.png">SAP Business One (via FIT Academy)</li>
+        </ul>
+
+        <h2 id="contact">Contact</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        
+           
+
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Jayson C. Altivo. All rights reserved.</p>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/jayson-altivo-9b234830a" target="_blank">LinkedIn</a></p>
+    </footer>
+
+    <button id="back-to-top">↑</button>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-img" src="" alt="Certificate">
+        </div>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div id="thank-you-modal" class="modal">
+        <div class="modal-content thank-you-content">
+            <h2>Thank You!</h2>
+            <p>Your message has been sent successfully. I'll get back to you soon.</p>
+            <button id="close-thank-you">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
