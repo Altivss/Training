@@ -257,6 +257,10 @@ li.animate {
         padding: 2px;
         background-color: white;
     }
+    .container > p {
+        font-size: 0.8em;
+        margin-bottom: 10px;
+    }
     .progress-bar {
         height: 15px;
     }
