@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Hover change image for profile image
     const profileImg = document.getElementById('profile-img');
     const originalSrc = profileImg.src;
-    const hoverSrc = 'BS IT_ALTIVO_IMG_V_5261.jpg';
+    const hoverSrc = 'images/BS IT_ALTIVO_IMG_V_5261.jpg';
     profileImg.addEventListener('mouseenter', function() {
         this.src = hoverSrc;
     });
