@@ -228,6 +228,7 @@ li.animate {
     .container {
         padding: 10px;
         margin: 10px auto;
+        max-width: 100%;
     }
     h1 {
         font-size: 1.8em;
@@ -287,6 +288,78 @@ li.animate {
     .thank-you-content button {
         padding: 8px 15px;
         font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+        margin: 5px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    #profile-img {
+        width: 80px;
+        height: 80px;
+    }
+    h2 {
+        font-size: 1.1em;
+    }
+    p {
+        font-size: 0.8em;
+    }
+    li {
+        padding: 5px;
+        font-size: 0.8em;
+    }
+    li img {
+        width: 1.2em;
+        height: 1.2em;
+        margin: 0 auto 5px;
+    }
+    .progress-bar {
+        height: 12px;
+    }
+    #contact-form input,
+    #contact-form textarea {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+    #contact-form button {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+    footer {
+        padding: 5px;
+        font-size: 0.8em;
+    }
+    #back-to-top {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+        bottom: 15px;
+        right: 15px;
+    }
+    .thank-you-content {
+        padding: 15px;
+    }
+    .thank-you-content h2 {
+        font-size: 1.3em;
+    }
+    .thank-you-content p {
+        font-size: 0.9em;
+    }
+    .thank-you-content button {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+    .modal-content {
+        width: 90%;
+        padding: 15px;
+    }
+    #modal-img {
+        width: 100%;
     }
 }
 
