@@ -96,19 +96,25 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contact-form');
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        if (name && email && message) {
-            const subject = 'Contact from ' + name;
-            const body = 'From: ' + email + '\n\n' + message;
-            window.location.href = 'mailto:jaysonaltivo06@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-            const thankYouModal = document.getElementById('thank-you-modal');
-            thankYouModal.style.display = 'block';
-            contactForm.reset();
-        } else {
-            alert('Please fill in all fields.');
-        }
+        const formData = new FormData(contactForm);
+        fetch('https://formspree.io/f/xwprragd', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                const thankYouModal = document.getElementById('thank-you-modal');
+                thankYouModal.style.display = 'block';
+                contactForm.reset();
+            } else {
+                alert('Failed to send message. Please try again.');
+            }
+        }).catch(error => {
+            console.error('Error:', error);
+            alert('Failed to send message. Please try again.');
+        });
     });
 
     // Thank you modal close
