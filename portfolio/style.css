@@ -226,14 +226,57 @@ li.animate {
 
 @media (max-width: 768px) {
     .container {
-        padding: 20px;
+        padding: 10px;
+        margin: 10px auto;
     }
     h1 {
-        font-size: 2em;
+        font-size: 1.8em;
     }
     #profile-img {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    p {
+        font-size: 0.9em;
+    }
+    li {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+    .progress-bar {
+        height: 15px;
+    }
+    #contact-form input,
+    #contact-form textarea {
+        font-size: 0.9em;
+    }
+    #contact-form button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+    footer {
+        padding: 10px;
+    }
+    #back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    .thank-you-content {
+        padding: 20px;
+    }
+    .thank-you-content h2 {
+        font-size: 1.5em;
+    }
+    .thank-you-content p {
+        font-size: 1em;
+    }
+    .thank-you-content button {
+        padding: 8px 15px;
+        font-size: 0.9em;
     }
 }
 

@@ -84,6 +84,13 @@ document.addEventListener('DOMContentLoaded', function() {
     profileImg.addEventListener('mouseleave', function() {
         this.src = originalSrc;
     });
+    // For mobile touch
+    profileImg.addEventListener('touchstart', function() {
+        this.src = hoverSrc;
+    });
+    profileImg.addEventListener('touchend', function() {
+        this.src = originalSrc;
+    });
 
     // Contact form submission
     const contactForm = document.getElementById('contact-form');
