@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Typing effect for intro
-    const introText = "I am BS Information Technology graduate with the experience on Web development like React js, HTML, CSS, and Javascript. On the backend is MongoDB, Express and SQL. I also have an experience in Odoo when I was on my Internship at ICS Enterprise Corporation . I learn  Java, Python and C# in my College . Also, have some knowledge in networking like Huawei and Cisco. I am strong in teamwork, critical thinking. Adaptable and eager to learn and contribute to the team.";
+    const introText = "I am a BS Information Technology graduate with hands-on experience in web development using React.js, HTML, CSS, and JavaScript. On the backend, I have worked with MongoDB, Express, and SQL. During my internship at ICS Enterprise Corporation, I gained experience using Odoo.I also learned Java, Python, and C# during my studies and have foundational knowledge in networking with Huawei and Cisco technologies. I am team-oriented, a critical thinker, adaptable, and eager to learn and contribute to achieving team goals.";
     const introElement = document.getElementById('intro');
     let index = 0;
     function typeWriter() {
