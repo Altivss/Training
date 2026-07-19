@@ -1,0 +1,24 @@
+Jayson C. Altivo
+Web Developer
+
+Email: jaysonaltivo06@gmail.com
+Phone: 09086981332
+LinkedIn: linkedin.com/in/jayson-altivo-9b234830a
+
+Summary
+BS Information Technology graduate with experience in web development, modern frontend frameworks, and backend fundamentals. Skilled in building responsive websites, collaborating in team environments, and creating polished digital experiences.
+
+Skills
+- HTML, CSS, JavaScript, TypeScript
+- React.js, Angular
+- Node.js, MongoDB, MySQL
+- Java, Spring Boot
+- Generative AI and AI-assisted development
+
+Experience
+- Accenture: Web application development using Angular and Node.js
+- ICS Enterprise Corporation: Web development and Odoo system support
+- Panasonic: Manufacturing immersion and operational learning
+
+Education
+- BS Information Technology, STI College Calamba

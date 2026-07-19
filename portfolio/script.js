@@ -1,159 +1,73 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Modal for certifications
-    const certifications = document.querySelectorAll('#certifications li');
-    const modal = document.getElementById('modal');
-    const modalImg = document.getElementById('modal-img');
-    const closeBtn = document.getElementsByClassName('close')[0];
+document.addEventListener('DOMContentLoaded', function () {
+  const loader = document.getElementById('page-loader');
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
+  const backToTopBtn = document.getElementById('back-to-top');
+  const scrollProgress = document.getElementById('scroll-progress');
+  const revealItems = document.querySelectorAll('.reveal');
+  const contactForm = document.getElementById('contact-form');
 
-    certifications.forEach(function(li) {
-        li.addEventListener('click', function() {
-            const imageSrc = this.getAttribute('data-image');
-            modalImg.src = imageSrc;
-            modal.style.display = 'block';
-        });
+  setTimeout(function () {
+    loader.style.opacity = '0';
+    setTimeout(function () {
+      loader.style.display = 'none';
+    }, 400);
+  }, 450);
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
     });
+  }, { threshold: 0.15 });
 
-    closeBtn.onclick = function() {
-        modal.style.display = 'none';
-    };
+  revealItems.forEach(function (item) {
+    observer.observe(item);
+  });
 
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
+  darkModeToggle.addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode');
+    darkModeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀' : '☾';
+  });
+
+  window.addEventListener('scroll', function () {
+    const scrollTop = window.pageYOffset;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    scrollProgress.style.width = percent + '%';
+
+    backToTopBtn.classList.toggle('show', scrollTop > 320);
+  });
+
+  backToTopBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  contactForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const button = this.querySelector('button');
+    const originalText = button.textContent;
+    const form = this;
+
+    button.textContent = 'Sending...';
+
+    fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    })
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error('Submission failed');
         }
-    };
-
-    // Typing effect for intro
-    const introText = "I am a BS Information Technology graduate with hands-on experience in web development using React.js, HTML, CSS, and JavaScript. On the backend, I have worked with MongoDB, Express, and SQL. During my internship at ICS Enterprise Corporation, I gained experience using Odoo.I also learned Java, Python, and C# during my studies and have foundational knowledge in networking with Huawei and Cisco technologies. I am team-oriented, a critical thinker, adaptable, and eager to learn and contribute to achieving team goals.";
-    const introElement = document.getElementById('intro');
-    let index = 0;
-    function typeWriter() {
-        if (index < introText.length) {
-            introElement.innerHTML += introText.charAt(index);
-            index++;
-            setTimeout(typeWriter, 50);
-        }
-    }
-    introElement.innerHTML = '';
-    typeWriter();
-
-    // Animate progress bars on scroll
-    const progressBars = document.querySelectorAll('.progress');
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.width = entry.target.getAttribute('data-width');
-            }
-        });
-    });
-    progressBars.forEach(bar => {
-        observer.observe(bar);
-    });
-
-    // Animate list items on scroll
-    const listItems = document.querySelectorAll('li');
-    const listObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-            }
-        });
-    });
-    listItems.forEach(item => {
-        listObserver.observe(item);
-    });
-
-    // Dark mode toggle
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
-    darkModeToggle.addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-        if (document.body.classList.contains('dark-mode')) {
-            darkModeToggle.textContent = 'Light Mode';
-        } else {
-            darkModeToggle.textContent = 'Dark Mode';
-        }
-    });
-
-    // Hover change image for profile image
-    const profileImg = document.getElementById('profile-img');
-    const originalSrc = profileImg.src;
-    const hoverSrc = 'images/BS IT_ALTIVO_IMG_V_5261.jpg';
-    profileImg.addEventListener('mouseenter', function() {
-        this.src = hoverSrc;
-    });
-    profileImg.addEventListener('mouseleave', function() {
-        this.src = originalSrc;
-    });
-    // For mobile touch
-    profileImg.addEventListener('touchstart', function() {
-        this.src = hoverSrc;
-    });
-    profileImg.addEventListener('touchend', function() {
-        this.src = originalSrc;
-    });
-
-    // Contact form submission
-    const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const formData = new FormData(contactForm);
-        fetch('https://formspree.io/f/xwprragd', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        }).then(response => {
-            if (response.ok) {
-                const thankYouModal = document.getElementById('thank-you-modal');
-                thankYouModal.style.display = 'block';
-                contactForm.reset();
-            } else {
-                alert('Failed to send message. Please try again.');
-            }
-        }).catch(error => {
-            console.error('Error:', error);
-            alert('Failed to send message. Please try again.');
-        });
-    });
-
-    // Thank you modal close
-    const closeThankYou = document.getElementById('close-thank-you');
-    closeThankYou.addEventListener('click', function() {
-        const thankYouModal = document.getElementById('thank-you-modal');
-        thankYouModal.style.display = 'none';
-    });
-
-    // Close thank you modal when clicking outside
-    window.addEventListener('click', function(event) {
-        const thankYouModal = document.getElementById('thank-you-modal');
-        if (event.target == thankYouModal) {
-            thankYouModal.style.display = 'none';
-        }
-    });
-
-    // Scroll progress bar
-    const scrollProgress = document.getElementById('scroll-progress');
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset;
-        const docHeight = document.body.scrollHeight - window.innerHeight;
-        const scrollPercent = (scrollTop / docHeight) * 100;
-        scrollProgress.style.width = scrollPercent + '%';
-    });
-
-    // Back to top button
-    const backToTopBtn = document.getElementById('back-to-top');
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            backToTopBtn.classList.add('show');
-        } else {
-            backToTopBtn.classList.remove('show');
-        }
-    });
-    backToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+        form.reset();
+        alert('Thanks for reaching out. I will get back to you soon.');
+      })
+      .catch(function () {
+        alert('Sorry, the message could not be sent right now. Please email me directly at jaysonaltivo06@gmail.com.');
+      })
+      .finally(function () {
+        button.textContent = originalText;
+      });
+  });
 });

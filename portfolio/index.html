@@ -1,174 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Jayson C. Altivo</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-    <div id="scroll-progress"></div>
-    <button id="dark-mode-toggle">Dark Mode</button>
-    <div class="container">
-        <div id="home">
-            <img id="profile-img" src="images/altivo.jpg" alt="">
-            <h1>Jayson C. Altivo</h1>
-            <p id="intro">I am a BS Information Technology graduate with hands-on experience in web development using
-                React.js, HTML, CSS, and JavaScript. On the backend, I have worked with MongoDB, Express, and SQL.
-                During my internship at ICS Enterprise Corporation, I gained experience using Odoo.
-                I also learned Java, Python, and C# during my studies and have foundational knowledge in networking with
-                Huawei and Cisco technologies. I am team-oriented, a critical thinker, adaptable, and eager to learn and
-                contribute to achieving team goals.</p>
-        </div>
-        <p>📞 09086981332</p>
-        <p>📧 jaysonaltivo06@gmail.com</p>
-        <p>🌐 www.linkedin.com/in/jayson-altivo-9b234830a</p>
-        <p>🏠 0138 Purok 1, Brgy.Makiling, Calamba City, Laguna</p>
-
-        <h2 id="education">Education</h2>
-        <ul>
-            <li>BS Information Technology, STI College Calamba, 2021-2025 </li>
-            <li>Senior High School, Makiling Integrated School, 2018-2020 </li>
-        </ul>
-
-        <h2 id="skills">Skills</h2>
-        <div class="skills">
-            <div class="skill">
-                <span>Web Development</span>
-                <div class="progress-bar">
-                    <div class="progress" data-width="85%"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span>Backend Development</span>
-                <div class="progress-bar">
-                    <div class="progress" data-width="80%"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span>Programming Languages</span>
-                <div class="progress-bar">
-                    <div class="progress" data-width="75%"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span>Networking Basics</span>
-                <div class="progress-bar">
-                    <div class="progress" data-width="70%"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <span>Soft Skills</span>
-                <div class="progress-bar">
-                    <div class="progress" data-width="90%"></div>
-                </div>
-            </div>
-        </div>
-        <h2 id="projects">Projects</h2>
-        <ul>
-            <li>Capstone Project<br>
-                <br>Resident Record Management System, Certificate Issuance System for Barangay Mayapa, Calamba City,
-                Laguna<br>
-                <br>• Resident record
-                <br>• Issuance of Certificates
-                <br>• Storage of the new and old files
-                <br>• Can track the previous Blotter and store the new blotter for future purposes.
-            </li> <br>
-
-            <li>Company Website <br>
-                <br>ICS Enterprise Corporation <br>
-                <br>• Showcase the product of the company
-                <br>• Can request a quotation for bulk orders
-                <br>• The user can apply through website and it direct on email
-            </li>
-
-        </ul>
-        <h2 id="experience">Work Experience</h2>
-        <ul>
-            <li>Work<br>
-                <br>Accenture<br>
-                <br>Uptown 3, Bonifacio Global City Taguig<br>
-                <br>• Angular and Node Js<br>
-                •Responsible for developing, enhancing, and maintaining enterprise applications using modern web
-                technologies.<br>
-                •Experienced in building frontend solutions using Angular and developing backend services
-                using Node.js.<br>
-                •Collaborates with cross-functional teams to analyze requirements, troubleshoot issues,
-                implement features, and deliver scalable software solutions following industry best practices.
-            </li><br>
-
-
-
-
-            <li>Internship<br>
-                <br>ICS Enterprise Corporation<br>
-                <br>Barangay Halang , Calamba City, Laguna<br>
-                <br>• Web Development & Odoo<br>
-                • Handled the company website and update the products<br>
-                • Managed the Odoo system for inventory and sales tracking<br>
-                • Assisted in troubleshooting technical issues<br>
-            </li><br>
-
-            <li>Immersion<br>
-                <br>Panasonic Manufacturing Philippines Corporation<br>
-                <br>Barangay Milagrosa, Calamba City, Laguna<br>
-                <br>• Observed the daily operations of the manufacturing process<br>
-                • Learned about quality control and assurance practices<br>
-            </li>
-        </ul>
-        <h2 id="certifications">Certifications</h2>
-        <ul id="certifications">
-            <li data-image="images/System Admin.png">System Administration (via Linux Professional Institute)</li>
-            <li data-image="images/Java.png">Java Foundations (via Oracle Academy)</li>
-            <li data-image="images/SAP.png">SAP Business One (via FIT Academy)</li>
-            <li data-image="images/Accenture.png">Accenture Tech AmplifAi(via Accenture)</li>
-        </ul>
-
-        <h2 id="contact">Contact</h2>
-        <form id="contact-form" action="https://formspree.io/f/xwprragd" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-
-
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jayson C. Altivo | Portfolio</title>
+    <meta name="description" content="Modern portfolio of Jayson C. Altivo, a web developer focused on building polished digital experiences." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-loader" id="page-loader">
+      <div class="loader-ring"></div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Jayson C. Altivo. All rights reserved.</p>
-        <p>Connect with me on <a href="https://www.linkedin.com/in/jayson-altivo-9b234830a" target="_blank">LinkedIn</a>
-        </p>
+    <div id="scroll-progress"></div>
+    <button id="dark-mode-toggle" class="icon-btn" aria-label="Toggle dark mode">☾</button>
+
+    <header class="site-header">
+      <nav class="nav-bar">
+        <a href="#home" class="brand">Jayson<span>.</span></a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero section reveal">
+        <div class="hero-copy">
+          <p class="eyebrow">Full-Stack Developer · IT Graduate</p>
+          <h1>Building modern web experiences with clarity and purpose.</h1>
+          <p class="hero-text">
+            I’m Jayson C. Altivo, a web developer focused on crafting polished, responsive, and user-centered applications.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="cv/Jayson Altivo.pdf" download>Download CV</a>
+            <a class="btn btn-secondary" href="#contact">Contact Me</a>
+          </div>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/jayson-altivo-9b234830a" target="_blank" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M6.94 8.5A1.56 1.56 0 1 0 6.94 5.38a1.56 1.56 0 0 0 0 3.12ZM5.5 9.75h2.88V18H5.5zM10.2 9.75h2.76v1.12h.04c.38-.72 1.31-1.48 2.7-1.48 2.88 0 3.41 1.89 3.41 4.35V18H16.2v-7.4c0-1.76-.03-4.03-2.46-4.03-2.46 0-2.84 1.92-2.84 3.9V18H10.2z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/Altivss" target="_blank" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M12 2C6.48 2 2 6.59 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.35-3.37-1.35-.45-1.16-1.11-1.47-1.11-1.47-.91-.63.07-.62.07-.62 1 .07 1.53 1.03 1.53 1.03.89 1.54 2.34 1.1 2.91.84.09-.66.35-1.1.63-1.35-2.22-.26-4.56-1.14-4.56-5.08 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.04A9.4 9.4 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.31 2.75-1.04 2.75-1.04.55 1.41.2 2.45.1 2.71.64.72 1.03 1.64 1.03 2.76 0 3.95-2.34 4.82-4.57 5.08.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.01 10.01 0 0 0 22 12.25C22 6.59 17.52 2 12 2Z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <img id="profile-img" src="images/altivo.jpg" alt="Jayson C. Altivo" />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">About Me</p>
+          <h2>Creating thoughtful digital products with a strong product mindset.</h2>
+        </div>
+        <div class="about-grid">
+          <div class="glass-card">
+            <p>
+              I’m a BS Information Technology graduate with experience building websites and web applications using modern frontend and backend technologies. I enjoy turning ideas into clean, intuitive, and high-performing experiences.
+            </p>
+          </div>
+          <div class="glass-card">
+            <p>
+              My background includes hands-on work with React.js, Angular, JavaScript, TypeScript, Node.js, MongoDB, MySQL, Java, and Spring Boot. I’m always learning and improving how I build software.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Skills</p>
+          <h2>Tools and technologies I work with.</h2>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card glass-card">
+            <div class="skill-icon">✦</div>
+            <h3>Frontend</h3>
+            <p>HTML, CSS, JavaScript, TypeScript, React.js, Angular</p>
+          </article>
+          <article class="skill-card glass-card">
+            <div class="skill-icon">⚙️</div>
+            <h3>Backend</h3>
+            <p>Node.js, MongoDB, MySQL, Java, Spring Boot</p>
+          </article>
+          <article class="skill-card glass-card">
+            <div class="skill-icon">🤖</div>
+            <h3>AI</h3>
+            <p>Generative AI, Agentic AI</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h2>Selected work that reflects my approach to building products.</h2>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card glass-card">
+            <img src="images/mayapa.png" alt="Capstone project preview" />
+            <div class="project-body">
+              <h3>Resident Record Management System</h3>
+              <p>A digital solution for barangay record handling, certificate issuance, and blotter tracking.</p>
+              <div class="chip-row">
+                <span>Vue JS</span><span>Laravel</span><span>PHP</span><span>MySQL</span>
+              </div>
+              
+            </div>
+          </article>
+          <article class="project-card glass-card">
+            <img src="images/ics.png" alt="ICS enterprise website preview" />
+            <div class="project-body">
+              <h3>ICS Enterprise Website</h3>
+              <p>Created a company website with product showcases, quotation requests, and online application features.</p>
+              <div class="chip-row">
+                <span>React</span><span>Node.js</span><span>MongoDB</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2>Professional experience and internships.</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item glass-card">
+            <h3>Accenture</h3>
+            <p class="meta">Associate Software Engineer · March 2026 - Present</p>
+            <p>Worked on modern web applications using Angular and Node.js while collaborating with cross-functional teams.</p>
+          </article>
+          <article class="timeline-item glass-card">
+            <h3>ICS Enterprise Corporation</h3>
+            <p class="meta">Intern · March 2025 - May 2025</p>
+            <p>Managed web development tasks and supported the company’s Odoo-based operations.</p>
+          </article>
+          <article class="timeline-item glass-card">
+            <h3>Panasonic Manufacturing Philippines Corporation</h3>
+            <p class="meta">Immersion · January 2020 - March 2020</p>
+            <p>Observed manufacturing operations and learned about quality control and systems workflow.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="education" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Education</p>
+          <h2>Academic background and continuous learning.</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item glass-card">
+            <h3>BS Information Technology</h3>
+            <p class="meta">STI College Calamba · 2021 - 2025</p>
+          </article>
+          <article class="timeline-item glass-card">
+            <h3>Senior High School</h3>
+            <p class="meta">Makiling Integrated School · 2018 - 2020</p>
+          </article>
+        </div>
+      </section>
+
+       <section id="education" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Training</p>
+          <h2>Trainings</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item glass-card">
+            <h3>Accenture Tech AmplifAi Program</h3>
+            <p class="meta">Accenture September 2025 - January 2026</p>
+          </article>
+      </section>
+
+      <section id="certifications" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Certifications</p>
+          <h2>School certifications and training milestones.</h2>
+        </div>
+        <div class="cert-grid">
+          <article class="glass-card cert-card">
+            <img src="images/System Admin.png" alt="System Administration certification" />
+            <h3>System Administration</h3>
+            <p>Linux Professional Institute</p>
+          </article>
+          <article class="glass-card cert-card">
+            <img src="images/Java.png" alt="Java Foundations certification" />
+            <h3>Java Foundations</h3>
+            <p>Oracle Academy</p>
+          </article>
+          <article class="glass-card cert-card">
+            <img src="images/SAP.png" alt="SAP Business One certification" />
+            <h3>SAP Business One</h3>
+            <p>FIT Academy</p>
+          </article>
+          <article class="glass-card cert-card">
+            <img src="images/Accenture.png" alt="Accenture Tech AmplifAi certification" />
+            <h3>Accenture Tech AmplifAi</h3>
+            <p>Accenture</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Contact</p>
+          <h2>Let’s build something meaningful together.</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="glass-card contact-card">
+            <p><strong>Email:</strong> jaysonaltivo06@gmail.com</p>
+            <p><strong>Phone:</strong> 09086981332 / 09943438668</p>
+            <p><strong>Location:</strong> Barangay Makiling, Calamba City, Laguna</p>
+          </div>
+          <form class="glass-card contact-form" id="contact-form" action="https://formspree.io/f/xwprragd" method="POST">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" placeholder="Your email" required />
+            <label for="message">Your message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Jayson C. Altivo. All rights reserved.</p>
     </footer>
 
-    <button id="back-to-top">↑</button>
-
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <img id="modal-img" src="" alt="Certificate">
-        </div>
-    </div>
-
-    <!-- Thank You Modal -->
-    <div id="thank-you-modal" class="modal">
-        <div class="modal-content thank-you-content">
-            <h2>Thank You!</h2>
-            <p>Thank you for your message. I'll get back to you soon.</p>
-            <button id="close-thank-you">Close</button>
-        </div>
-    </div>
+    <button id="back-to-top" class="icon-btn" aria-label="Back to top">↑</button>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
